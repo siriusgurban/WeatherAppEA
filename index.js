@@ -49,17 +49,3 @@ button.addEventListener("click", (e) => {
             cardBody.innerHTML = `<h5 class="card-title text-center fs-2">City not found</h5>`
         })
 })
-
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=Baku&appid=${apiKey}`)
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-    console.log(data.name);
-    console.log(data.sys.country);
-    console.log(data.wind.speed.toFixed());
-    console.log(data.main.temp.toFixed());
-    console.log(data.weather[0].main);
-
-})
-
-
